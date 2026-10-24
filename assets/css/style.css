@@ -1,0 +1,696 @@
+/* ============================================================
+   TEMA: BIRU MUDA SOLID (CLEAN, MODERN, TANPA GRADASI)
+   PERPUSTAKAAN SEKOLAH DIGITAL BERBASIS WEB
+   FILE: assets/css/style.css
+   SIMBOL GAYA BOOTSTRAP (100% OFFLINE LOCALHOST)
+   ============================================================ */
+
+:root {
+  /* Palet Biru Muda Solid (Light Blue / Sky Blue) */
+  --primary: #0ea5e9;          /* Biru Muda Solid (Sky-500) */
+  --primary-dark: #0284c7;     /* Biru Muda Sedikit Lebih Tua (Sky-600) */
+  --primary-light: #38bdf8;    /* Biru Muda Cerah (Sky-400) */
+  --primary-subtle: #e0f2fe;   /* Latar Biru Muda Halus (Sky-100) */
+  --primary-border: #bae6fd;   /* Border Biru Muda (Sky-200) */
+
+  --bg-app: #f0f9ff;           /* Background Aplikasi Biru Muda Sangat Lembut */
+  --surface: #ffffff;          /* Putih Bersih Card */
+  --border: #e2e8f0;           /* Border Abu-abu Halus */
+  --text-main: #0f172a;        /* Teks Utama Gelap & Jelas */
+  --text-muted: #64748b;       /* Teks Sekunder Slate */
+
+  --danger: #ef4444;           /* Merah Solid */
+  --warning: #f59e0b;          /* Kuning/Amber Solid */
+  --success: #0ea5e9;          /* Biru Muda */
+  --info: #0284c7;             /* Biru Info */
+
+  --shadow-sm: 0 1px 3px rgba(14, 165, 233, 0.08);
+  --shadow-md: 0 4px 12px rgba(14, 165, 233, 0.12);
+  --radius: 8px;
+  --transition: all 0.2s ease-in-out;
+}
+
+/* Reset Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Gaya Simbol / Ikon Bootstrap (bi) */
+.bi {
+  display: inline-block;
+  vertical-align: -0.15em;
+  fill: currentColor;
+}
+
+/* Top Navbar Solid Biru Muda (Tanpa Gradasi) */
+.navbar {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 0.85rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.brand-icon {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-text h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.brand-text p {
+  font-size: 0.72rem;
+  color: #e0f2fe;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 6px;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+
+.nav-link:hover, .nav-link.active {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+}
+
+.nav-user {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Layout Wrapper */
+.main-wrapper {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+/* Hero / Banner Solid Biru Muda (Tanpa Gradasi) */
+.flora-hero {
+  background-color: var(--primary-subtle);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin-bottom: 24px;
+}
+
+.flora-hero h2 {
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flora-hero p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  max-width: 750px;
+}
+
+/* Card / Box Styling */
+.card {
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Grid & Dashboard Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--primary);
+}
+
+.stat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: var(--primary-subtle);
+  color: var(--primary-dark);
+}
+
+.stat-info h3 {
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.stat-info p {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+/* Book Catalog Grid */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: var(--transition);
+}
+
+.book-card:hover {
+  border-color: var(--primary-border);
+  box-shadow: var(--shadow-md);
+}
+
+.book-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  border: 1px solid var(--border);
+}
+
+.book-cover {
+  height: 160px;
+  background-color: var(--primary-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  border-bottom: 1px solid var(--border);
+}
+
+.book-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-category {
+  font-size: 0.74rem;
+  color: var(--primary-dark);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.book-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.book-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.book-stock {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+}
+
+/* Tables & Responsive */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+table th {
+  background-color: #f8fafc;
+  color: var(--text-main);
+  padding: 12px 14px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+table tr:hover {
+  background-color: var(--primary-subtle);
+}
+
+/* Badges Status Solid */
+.badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge-dipinjam {
+  background-color: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+
+.badge-dikembalikan {
+  background-color: var(--primary-subtle);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-border);
+}
+
+.badge-menunggu {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+.badge-ditolak {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.badge-admin {
+  background-color: var(--primary-subtle);
+  color: var(--primary-dark);
+  border: 1px solid var(--primary-border);
+}
+
+.badge-siswa {
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  background-color: #ffffff;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+/* Buttons Solid Biru Muda */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-dark);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-subtle);
+}
+
+.btn-success {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-warning {
+  background-color: var(--warning);
+  color: #ffffff;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.76rem;
+  border-radius: 4px;
+}
+
+/* Alert Notification */
+.alert {
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 0.86rem;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid transparent;
+}
+
+.alert-success {
+  background-color: var(--primary-subtle);
+  color: var(--primary-dark);
+  border-color: var(--primary-border);
+}
+
+.alert-danger {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.alert-warning {
+  background-color: #fffbeb;
+  color: #92400e;
+  border-color: #fde68a;
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Search and Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Auth Pages (Login / Daftar) Solid */
+.auth-container {
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.auth-card {
+  background-color: var(--surface);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.1);
+  border: 1px solid var(--primary-border);
+  width: 100%;
+  max-width: 420px;
+  overflow: hidden;
+}
+
+.auth-header {
+  background-color: var(--primary);
+  color: #ffffff;
+  padding: 26px 20px;
+  text-align: center;
+}
+
+.auth-header h2 {
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+}
+
+.auth-header p {
+  font-size: 0.82rem;
+  color: #e0f2fe;
+}
+
+.auth-body {
+  padding: 26px 22px;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+}
+
+.auth-footer a {
+  color: var(--primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: auto;
+}
+
+/* Print CSS untuk Laporan */
+@media print {
+  .navbar, .btn, .filter-bar, .no-print, .footer {
+    display: none !important;
+  }
+  body, .main-wrapper {
+    background-color: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .card {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  table th {
+    background-color: #f1f5f9 !important;
+    color: #000 !important;
+  }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-dark);
+    padding: 14px;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flora-hero h2 {
+    font-size: 1.25rem;
+  }
+}
